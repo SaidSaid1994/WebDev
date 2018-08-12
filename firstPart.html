@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First Part</title>
+		<link rel="stylesheet" type="text/css" href="firstPart.css">
+	</head>
+	<body>
+		<!-- Display Date on top right Side -->
+		<div class="date">
+			<label>Date:</label>
+			<label id="insertDate"></label>
+		</div>
+		<!-- header and Navbar -->
+		<div class="header">
+			<div class="navbar">
+				<ul>
+					<a href="#"><li>Home</li></a>
+					<a href="#"><li>Career</li></a>
+					<a href="#"><li>Product</li></a>
+					<a href="#"><li>About Us</li></a>
+					<a href="#"><li>Contact Us</li></a>
+				</ul>
+			</div>
+			<div class="signUp">
+				<a href="#signUpForm">Sign Up</a>
+			</div>
+		</div>
+		<!-- video -->
+		<div class="playVideo">
+			<button id="btn" onclick="playVideo(this,'videoplayer');">Play video</button>
+			<video id="videoplayer" controls="controls">
+				<!-- <source src="v.mp4"> -->
+			</video>
+		</div>
+		<!-- Form start -->
+		<div class="signUpForm">
+			<img src="1.png">
+		</div>
+		<a name="signUpForm"></a>
+		<div class="singInForm" >
+			<form>	
+				<input type="text" name="Fname" id="firstName" placeholder="first name" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,1);" ><br>
+				<span id="invalidName">*invalid first name</span>
+				<input type="text" name="sname" id="surName" placeholder="last name" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,2);" >
+				<span id="invalidsurName">*invalid last name</span>
+				<input type="text" name="pemail" id="Email" placeholder="name@example.com" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,4);"><br>
+				<span id="invalidEmail">*invalid email</span>
+				<select>
+					<option >Delhi</option>
+					<option>Mumbai</option>
+					<option>Kolkata</option>
+					<option>Bangalore</option>
+					<option>Chennai</option>
+					<option>Hyderabad</option>
+				</select><br>
+				<textarea id="detailOfCity" placeholder="Enter The Detail of Your City" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,7);"></textarea><br>
+				<span id="invalidDetail">*invalid detail</span>
+				<input type="number" id="Age" placeholder="Enter Your Age Range(18-120)" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,5);"><br>
+				<span id="invalidAge">*invalid age</span>
+				<input type="text" id="yourChoice" placeholder="Your Next Choice" onfocus="focusedOnInput(this);" onblur="bluredOnInput(this,6);"><br>
+				<span id="invalidChoice">*invalid choice</span>
+	 			<input type="submit" onclick ="return validate();" value="Submit" id="continue">
+			</form>						
+		</div>
+		<!-- form end -->
+
+
+
+
+		<!-- Javascript start -->
+		<script type="text/javascript">
+			function displayDate(){
+				var myDate=new Date();
+				var day=myDate.getDate();
+				var year=myDate.getFullYear();
+				var month=myDate.getMonth();
+				var app=document.getElementById('insertDate');
+				console.log(day);
+				app.innerHTML+=day;
+				app.innerHTML+="-";
+				app.innerHTML+=month;
+				app.innerHTML+="-";
+				app.innerHTML+=year;
+			}
+
+			function playVideo(btn,vi){
+				var vid=document.getElementById(vi);
+				if(vid.paused){
+					vid.play();
+					btn.innerHTML="Pause Video";
+				}
+				else{
+					vid.pause();
+					btn.innerHTML="Play Video";
+				}
+			}
+			function emailCheck(){	
+				var em=document.getElementById('Email').value;
+				var email=document.getElementById('Email');
+			 	if(em.length==0 || em.indexOf('@')<1 || em.lastIndexOf('.')>=em.length-2 || em.lastIndexOf('.')-em.indexOf('@')<3){
+			 		email.classList.add('changeStyleOfInput');
+					email.style.backgroundColor='#FADBD8';
+					email.style.border='1px solid #7B241C';
+					document.getElementById('invalidEmail').style.display='block';
+					return false
+			 	}
+			 	else{
+			 		email.classList.remove('changeStyleOfInput');
+					email.style.backgroundColor='white';
+					email.style.border='1px solid  #D5D8DC';
+					document.getElementById('invalidEmail').style.display='none';
+					return true;
+			 	}
+			}
+			function checkName(n){
+				var arryInvalid=['invalidName','invalidsurName']
+				var flag=2;
+				if(n==1){
+					var x=document.getElementById('firstName').value;
+					var y=document.getElementById('firstName');
+				}
+				if(n==2){
+					var x=document.getElementById('surName').value;
+					var y=document.getElementById('surName');
+				}
+				
+				for(var i=0;i<x.length;i++){
+					if(!((x.charAt(i)>='a' && x.charAt(i)<='z')|| (x.charAt(i)>='A' && x.charAt(i)<='Z') ||(x.charAt(i)==' '))){
+						flag=0;
+						break;
+					}
+					else{
+						flag=1;
+					}
+				}
+				if(flag==0 || x.length==0){
+					y.style.backgroundColor='#FADBD8';
+					y.classList.remove('changeStyleOfInput');
+					y.style.border='1px solid #7B241C';
+					document.getElementById(arryInvalid[n-1]).style.display='block';
+					return false;
+				}
+				if(flag==1){
+					y.style.backgroundColor='white';
+					y.classList.remove('changeStyleOfInput');
+					y.style.border='1px solid #D5D8DC';
+					document.getElementById(arryInvalid[n-1]).style.display='none';
+					return true;
+				}
+			}
+			function ageCheck(){
+				var age=document.getElementById('Age').value;
+				console.log(age);
+				var ag=document.getElementById('Age');
+				if(age>=18 && age<=120){
+					ag.style.backgroundColor='white';
+					ag.classList.remove('changeStyleOfInput');
+					ag.style.border='1px solid #D5D8DC';
+					document.getElementById('invalidAge').style.display='none';
+					return true;
+				}
+				else{
+					ag.style.backgroundColor='#FADBD8';
+					ag.classList.remove('changeStyleOfInput');
+					ag.style.border='1px solid #7B241C';
+					document.getElementById('invalidAge').style.display='block';
+					return false;
+				}
+			}
+			function checkNextChoice() {
+				var choice=document.getElementById('yourChoice').value;
+				var ch=document.getElementById('yourChoice');
+				if(choice.length==0){
+					ch.style.backgroundColor='#FADBD8';
+					ch.classList.remove('changeStyleOfInput');
+					ch.style.border='1px solid #7B241C';
+					document.getElementById('invalidChoice').style.display='block';
+					return false;
+				}
+				else{
+					ch.style.backgroundColor='white';
+					ch.classList.remove('changeStyleOfInput');
+					ch.style.border='1px solid #D5D8DC';
+					document.getElementById('invalidChoice').style.display='none';
+					return true;
+				}
+			}
+			function focusedOnInput(sender){
+				document.getElementById(sender.id).style.border='1px solid #1B4F72';
+				document.getElementById(sender.id).classList.add('changeStyleOfInput');
+			}
+			function checkDetail(){
+				var detail=document.getElementById('detailOfCity').value;
+				var dt=document.getElementById('detailOfCity');
+				if(detail.length==0){
+					dt.style.backgroundColor='#FADBD8';
+					dt.classList.remove('changeStyleOfInput');
+					dt.style.border='1px solid #7B241C';
+					document.getElementById('invalidDetail').style.display='block';
+					return false;
+				}
+				else{
+					dt.style.backgroundColor='white';
+					dt.classList.remove('changeStyleOfInput');
+					dt.style.border='1px solid #D5D8DC';
+					document.getElementById('invalidDetail').style.display='none';
+					return true;
+				}
+			}
+			function bluredOnInput(sender,n){
+				document.getElementById(sender.id).style.border='1px solid #D5D8DC';
+				document.getElementById(sender.id).classList.remove('changeStyleOfInput');
+				if(n==1 ||n==2)
+					checkName(n);	
+				if(n==4)
+					emailCheck();
+				if(n==5)
+					ageCheck();	
+				if(n==6)
+					checkNextChoice();
+				if(n==7)
+					checkDetail();
+			}	
+			
+			function validate(){
+				var a=checkName(1);
+				var b=checkName(2);
+				var c=emailCheck();
+				var d=ageCheck();
+				var e=checkNextChoice();
+				var f=checkDetail();
+				
+				if(a&& b&& c &&d && e && f){
+
+					return true;
+				}
+				return false;
+			}
+			document.onload(displayDate());
+		</script>
+
+
+		<!-- Javascript End -->
+	</body>
+</html>

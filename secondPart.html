@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Second Part</title>
+		<link rel="stylesheet" type="text/css" href="secondPart.css">
+	</head>
+	<body>
+		<div class="container">
+			 <div class="paraDiv">
+				<p id="firstPara">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				
+				</p>
+				<p id="secondPara"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				
+				</p>
+				<p id="thirdPara">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					
+				</p>
+			</div>
+			<div class="paraDiv secondDiv">
+				<p id="firstPara">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				
+				</p>
+				<p id="secondPara"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				
+				</p>
+				<p id="thirdPara">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					
+				</p>
+			</div>
+		</div>
+		 <div class="EmployeeDetail">
+			<div class="EmployeeName">
+				<h1>Employee Names</h1>
+				<ul>
+					<li>Daniel</li>
+					<li>Alexander</li>
+					<li>Jack</li>
+					<li>Sophia</li>
+					<li>Hannah</li>
+					<li>Jenson</li>
+					<li>Hunter</li>
+					<li> Jessica</li>
+					<li>Maya</li>
+					<li>William</li>
+				</ul>
+			</div><div class="EmployeeId">
+				<h1>Employee Id's</h1>
+				<ul id="empId">
+					<li>201285</li>
+					<li>12423</li>
+					<li>34235</li>
+					<li>9863</li>
+					<li>872531</li>
+					<li>901231</li>
+					<li>1231</li>
+					<li>1231</li>
+					<li>786</li>
+					<li>09656</li>
+				</ul>
+			</div> 
+		</div>
+
+		<!-- javascript code start -->
+		<script type="text/javascript">
+			var unorderedlist = document.getElementById("empId");
+			var listItem = unorderedlist.getElementsByTagName("li");
+			for(var i=0;i<listItem.length;i++){
+				if(listItem[i].innerHTML.includes('5')){
+					var item=listItem[i];
+					item.style.color="white"
+					item.style.background = "steelblue";
+					item.style.fontSize = "25px";
+				}
+			}
+		</script>
+		<!-- javascript code end -->
+	</body>
+</html>

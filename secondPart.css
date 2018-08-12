@@ -1,0 +1,297 @@
+@media(min-width: 1200px){	
+	.container{
+		width: 98%;
+		height: 510px;
+		margin: auto;
+	}
+	.paraDiv{
+		width: 39%;
+		height: 500px;
+		margin: 0.5%;
+		float: left;
+		border: 2px dotted blue;
+	}
+	.paraDiv{
+		position: relative;
+		float: left;
+		left: 11%;
+		background-color: cyan;
+	}
+	.paraDiv p{
+		padding-left: 10px;
+		color: grey;
+	}
+	.secondDiv{
+		background-color: green;
+	}
+	.secondDiv p{
+		padding-left: 10px;
+		color: white;
+	}
+	.EmployeeDetail{
+		width: 98%;
+		margin:auto;
+	}
+	.EmployeeName{
+		clear: both;
+		float: left;
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 38%;
+		margin: 2px;
+		margin-left: 11.5%;
+	}
+	.EmployeeName h1,.EmployeeId h1{
+		font-family: helvetica;
+		color: #21618C;
+		margin-left: 15px;
+	}
+	.EmployeeName ul li:nth-child(odd){
+		background-color: #B3B6B7;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(odd):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeName ul li:nth-child(even){
+		background-color: #E5E7E9;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(even):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeId {
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 38%;
+		margin:5px;
+		float: right;
+		margin-right: 11%;
+	}
+	.EmployeeId ul li{
+		width: 40%;
+	}
+}
+@media(min-width: 992px) and (max-width: 1199px){	
+	.container{
+		width: 98%;
+		height: 510px;
+		margin: auto;
+	}
+	.paraDiv{
+		width: 39%;
+		height: 500px;
+		margin: 0.5%;
+		float: left;
+		border: 2px dotted blue;
+	}
+	.paraDiv{
+		position: relative;
+		float: left;
+		left: 11%;
+		background-color: cyan;
+	}
+	.paraDiv p{
+		padding-left: 10px;
+		color: grey;
+	}
+	.secondDiv{
+		background-color: green;
+	}
+	.secondDiv p{
+		padding-left: 10px;
+		color: white;
+	}
+	.EmployeeDetail{
+		width: 98%;
+		margin:auto;
+	}
+	.EmployeeName{
+		clear: both;
+		float: left;
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 38%;
+		margin: 2px;
+		margin-left: 11.5%;
+	}
+	.EmployeeName h1,.EmployeeId h1{
+		font-family: helvetica;
+		color: #21618C;
+		margin-left: 15px;
+	}
+	.EmployeeName ul li:nth-child(odd){
+		background-color: #B3B6B7;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(odd):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeName ul li:nth-child(even){
+		background-color: #E5E7E9;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(even):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeId {
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 38%;
+		margin:5px;
+		float: right;
+		margin-right: 11%;
+	}
+	.EmployeeId ul li{
+		width: 40%;
+	}
+}
+@media(min-width: 768px) and (max-width: 991px){
+	.container{
+		width: 100%;
+		height: 510px;
+	}
+	.paraDiv{
+		width: 48%;
+		height: 500px;
+		margin: 0.5%;
+		float: left;
+		border: 2px dotted blue;
+		background-color: cyan;
+	}
+	.paraDiv p{
+		padding-left: 10px;
+		color: grey;
+	}
+	.secondDiv{
+		background-color: green;
+	}
+	.secondDiv p{
+		padding-left: 10px;
+		color: white;
+	}
+	.EmployeeDetail{
+		width: 98%;
+		margin:auto;
+	}
+	.EmployeeName{
+		clear: both;
+		float: left;
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 48%;
+		margin: 2px;
+		/*margin-left: 11.5%;*/
+	}
+	.EmployeeName h1,.EmployeeId h1{
+		font-family: helvetica;
+		color: #21618C;
+		margin-left: 15px;
+	}
+	.EmployeeName ul li:nth-child(odd){
+		background-color: #B3B6B7;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(odd):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeName ul li:nth-child(even){
+		background-color: #E5E7E9;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(even):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeId {
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 48%;
+		margin:5px;
+		float: right;
+	}
+	.EmployeeId ul li{
+		width: 40%;
+	}
+}
+@media(max-width: 767px){
+	.container{
+		width: 100%;
+		height: 510px;
+	}
+	.paraDiv{
+		width: 100%;
+		height: 500px;
+		margin: 0.5%;
+		float: left;
+		border: 2px dotted blue;
+		background-color: cyan;
+	}
+	.paraDiv p{
+		padding-left: 10px;
+		color: grey;
+	}
+	.secondDiv{
+		background-color: green;
+	}
+	.secondDiv p{
+		padding-left: 10px;
+		color: white;
+	}
+	.EmployeeDetail{
+		width: 98%;
+		margin:auto;
+	}
+	.EmployeeName{
+		clear: both;
+		float: left;
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 100%;
+		margin: 2px;
+	}
+	.EmployeeName h1,.EmployeeId h1{
+		font-family: helvetica;
+		color: #21618C;
+		margin-left: 15px;
+	}
+	.EmployeeName ul li:nth-child(odd){
+		background-color: #B3B6B7;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(odd):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeName ul li:nth-child(even){
+		background-color: #E5E7E9;
+		width: 40%;
+		font-size: 20px;
+	}
+	.EmployeeName ul li:nth-child(even):hover{
+		background-color: white;
+		cursor: pointer;
+	}
+	.EmployeeId {
+		border: 1px solid #5DADE2;
+		border-radius: 5px;
+		width: 100%;
+		margin:5px;
+		float: right;
+	}
+	.EmployeeId ul li{
+		width: 40%;
+	}
+}
