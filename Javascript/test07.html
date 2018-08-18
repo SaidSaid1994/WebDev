@@ -1,0 +1,42 @@
+<html>
+<head>
+ <title>Javascript Donation Calculator</title>
+    <script>
+function donations() {
+var donate=document.getElementById("donate").value;
+if (donate == Math.floor(donate)) {
+            alert(donate);
+			document.getElementById("donate").value="";
+         } 
+		 else {
+            alert(Math.round(donate));
+			document.getElementById("donate").value="";
+         }
+
+ 
+
+}
+    </script>
+
+</head>
+<body>
+<div style="background-color: skyblue; padding:20px">
+    <table border="0" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>
+                Enter Input :
+            </td>
+            <td>
+                <input type='number' placeholder='Enter Amount' id='donate' name='donate'>
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2">
+                <input type='button' value='Donate' onclick="javascript:donations();">
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

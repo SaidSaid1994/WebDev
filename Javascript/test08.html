@@ -1,0 +1,71 @@
+<html>
+<head>
+ <title>Javascript vowels Calculator</title>
+    <script>
+function findVowels() {
+
+var str=document.getElementById('name').value;  
+
+   var vowelC = 0;
+var total_findVowels="";
+     for (var i = 0; i < str.length; i++) {
+
+     if (str.charAt(i).match(/[a-zA-Z]/) != null) {
+
+        // findVowels
+
+        if (str.charAt(i).match(/[aeiouAEIOU]/))
+  {
+
+ total_findVowels=total_findVowels+str.charAt(i);            
+ vowelC++;
+
+        }
+
+     }
+   }
+    document.getElementById('findVowels').value=total_findVowels;
+ document.getElementById('findVowels_count').value=vowelC;
+  
+ 
+
+}
+    </script>
+
+</head>
+<body>
+<div style="background-color: skyblue; padding:20px">
+    <table border="0" cellpadding=3" cellspacing="3">
+        <tr>
+            <td>
+                Enter Input :
+            </td>
+            <td>
+                <input type='text' value='' id='name' name='name'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Vowels Count :
+            </td>
+            <td>
+                <input type='text' readonly="true" value='' id='findVowels_count' name='findVowels_count'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Vowels :
+            </td>
+            <td>
+                <input type='text' readonly="true" value='' id='findVowels' name='findVowels'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type='button' value='Check' onclick="javascript:findVowels();">
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

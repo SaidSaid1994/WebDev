@@ -1,0 +1,45 @@
+<html>
+<head>
+ <title>Javascript Add two Numbers</title>
+    <script>
+function Add() {
+var num1=document.getElementById("num1").value;
+var num2=document.getElementById("num2").value;
+var sum=parseInt(num1)+parseInt(num2);
+
+alert("The Sum of Two given number is = "+sum);
+ 
+
+}
+    </script>
+
+</head>
+<body>
+<div style="background-color: skyblue; padding:20px">
+    <table border="0" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>
+                Enter Num 1 :
+            </td>
+            <td>
+                <input type='number' placeholder='Enter Number 1' id='num1' name='num1'>
+            </td>
+        </tr>
+		  <tr>
+            <td>
+                Enter Num 2 :
+            </td>
+            <td>
+                <input type='number' placeholder='Enter Number 2' id='num2' name='num2'>
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2">
+                <input type='button' value='Sum' onclick="javascript:Add();">
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

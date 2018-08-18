@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>railway reservation form </title>
+		<script>
+
+		function validatfrom()
+		{
+		
+		if(document.getElementById("from").value=="")
+		{
+			alert("Source is mandatory");
+		}
+		else if(/[^a-zA-Z]/.test(document.getElementById("from").value))
+		{
+			alert("Source is only in Alphabetic Letters");
+		}
+		
+		
+		}
+		function validatTo()
+		{
+		if(document.getElementById("to").value=="")
+		{
+			alert("Destination is mandatory");
+		}
+		else if (/[^a-zA-Z]/.test(document.getElementById("to").value))
+		{
+			alert("Destination is only in Alphabetic Letters");
+		}
+		else if(document.getElementById("from").value.localeCompare(document.getElementById("to").value)==0)
+		{
+			alert("Source And Destination Should not be the same");
+		}
+		
+		}
+		function validatName()
+		{
+		if(document.getElementById("name").value=="")
+		{
+			alert("Name is mandatory");
+		}
+		else if(/[^a-zA-Z]/.test(document.getElementById("name").value))
+		{
+			alert("Name should only contains Alphabetic Letters");
+		}
+		else if(document.getElementById("name").value.length<5)
+		{
+			alert("Name Length Should more than 5");
+		}
+		
+		
+		}
+		function validatAge()
+		{
+		if(document.getElementById("age").value=="")
+		{
+			alert("Age is mandatory");
+		}
+		else if(document.getElementById("age").value<18)
+		{
+			alert("Age Should More than 18");
+		}
+		
+		}
+		function validatAddress()
+		{
+		if(document.getElementById("adr").value=="")
+		{
+		alert("Address is mandatory");
+		}
+		
+		
+		}
+		function validatdate()
+		{
+		if(document.getElementById("dat").value=="")
+		{
+		alert("Date is mandatory");
+		}
+		else
+		{
+var d = new Date().toISOString().slice(0,10); 
+ 
+
+
+			var mydate=document.getElementById("dat").value;
+			
+			
+
+			if(d<mydate)
+			{
+				alert(" Reservation is Successful");
+			}
+			else	
+			{
+				alert("The given date is Past Date");
+			}
+		}
+		
+		}
+		</script>
+    </head>
+    <body bgcolor="#0AAFFBC">
+  
+        <center>
+        <h1><marquee bgcolor="#0FBF00">Railway Reservation System </marquee> </h1>
+     <table>
+     <tr>
+         <td>From:</td>
+         <td><input type="text" id="from" name="from" ></td>
+         </tr>
+     <tr>
+     <td>To:</td>
+     <td><input type="text" id="to" name="to" ></td>
+             </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name" name="name" ></td></tr>
+         <tr>
+         <td>Age:</td>
+         <td><input type="number" id="age" name="age" ></td>
+         </tr> 
+         <tr>
+         <td>Address:</td>
+         <td><input type="text" id="adr" name="adr" ></td></tr> 
+		  <tr>
+         <td>Future Date</td>
+         <td><input type="date" id="dat" name="dat" ></td></tr> 
+        
+         
+          
+          <tr>
+           <td><input type="button" value="submit" onclick="validatfrom();validatTo();validatName();validatAge();validatAddress();validatdate();"></td>
+           </tr>   
+         </table>   
+		 </center>
+    </body>
+</html>

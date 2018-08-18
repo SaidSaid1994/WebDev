@@ -1,0 +1,68 @@
+<html>
+<head>
+ <title>Javascript Donation Calculator</title>
+    <script>
+	function displayAllDetails()
+	{
+	var cd_name=document.getElementById("cdname").value;
+	var cd_publisher=document.getElementById("cdpub").value;
+	var cd_price=document.getElementById("cdprice").value;
+	if(cd_name==""||cd_publisher==""||cd_price=="")
+	{
+	alert("fill all the fields");
+	}
+	else
+	{
+	var CD_Details = {name:cd_name, publisher:cd_publisher, price:cd_price};
+	CD_Details.price=parseInt(CD_Details.price);
+	var tax=CD_Details.price*0.1;
+	
+	var after_tax=CD_Details.price+tax;
+	
+	var discount=after_tax*0.03;
+	var final_price=after_tax-discount;
+	alert("CD Name : "+CD_Details.name+"\n"+"CD Publisher : "+CD_Details.publisher+"\n"+"Final Price : "+final_price);
+	}
+	
+	}
+
+    </script>
+
+</head>
+<body>
+<div style="background-color: skyblue; padding:20px">
+    <table border="0" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>
+                Enter CD Name :
+            </td>
+            <td>
+                <input type='text' placeholder='CD Name' id='cdname' name='cdname' >
+            </td>
+        </tr>
+		  <tr>
+            <td>
+                Enter CD Publisher :
+            </td>
+            <td>
+                <input type='text' placeholder='CD Publisher' id='cdpub' name='cdpub' >
+            </td>
+        </tr>
+		 <tr>
+            <td>
+                Enter CD Price :
+            </td>
+            <td>
+                <input type='number' placeholder='CD Price' id='cdprice' name='cdprice' >
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2">
+                <input type='button' value='Display Details' onclick="javascript:displayAllDetails();">
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
